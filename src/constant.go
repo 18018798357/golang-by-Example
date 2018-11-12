@@ -8,7 +8,7 @@ import (
 //'const'用于声明一个常量
 const s string = "constant"
 
-func main(){
+func main() {
 
 	fmt.Println(s)
 
