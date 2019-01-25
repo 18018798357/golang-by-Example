@@ -10,13 +10,13 @@ func main(){
 	// 初始化colly
 	c := colly.NewCollector(
 		// 只采集规定的域名下的内容
-		colly.AllowedDomains("zhihu.com","api.zhihu.com"),
+		colly.AllowedDomains("zhihu.com","api.zhihu.com","zhihu.com/login/email"),
 		// 最大深度
 		colly.MaxDepth(1),
 	)
 
 	// 认证
-	err := c.Post("https://api.zhihu.com/sign_in",map[string]string{"username":"a","password":"admin"})
+	err := c.Post("https://www.zhihu.com/login/email",map[string]string{"username":"18018798357","password":"18018798357"})
 	if err != nil {
 		log.Fatal("==========",err)
 	}
